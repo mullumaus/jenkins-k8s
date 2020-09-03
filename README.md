@@ -9,7 +9,7 @@ kubectl create serviceaccount jenkins -n CI-ns
 kubectl get secret $(kubectl get sa jenkins -n CI-ns -o jsonpath={.secrets[0].name}) -n CI-ns -o jsonpath={.data.token} | base64 --decode
 kubectl get secret $(kubectl get sa jenkins -n CI-ns -o jsonpath={.secrets[0].name}) -n CI-ns -o jsonpath={.data.'ca\.crt'} | base64 --decode
 ```
-1. Create RBAC role with the required permissions for Jenkins kubernetes plugin 
+3. Authorization: Create RBAC role with the required permissions for Jenkins kubernetes plugin 
 ```
 cat > jenkins-role.yaml << EOF
 ---
