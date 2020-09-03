@@ -34,7 +34,7 @@ EOF
 
 kubectl apply -f jenkins-role.yaml -n CI-ns
 ```
-4. Create Rolebinding
+4. Create Role Binding
 ```
 cat > jenkins-rolebinding.yaml << EOF
 ---
